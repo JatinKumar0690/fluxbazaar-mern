@@ -1,0 +1,13 @@
+.product-hover:hover {
+  transform: translateY(1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.buy-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 1rem !important;
+}
