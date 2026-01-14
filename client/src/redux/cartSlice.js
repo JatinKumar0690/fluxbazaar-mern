@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/cart";
+const API = `${import.meta.env.VITE_API_URL}/api/cart`
 
 export const fetchCart = createAsyncThunk("cart/fetch", async () => {
   const token = localStorage.getItem("token");
