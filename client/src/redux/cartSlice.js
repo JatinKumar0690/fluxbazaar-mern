@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = `${import.meta.env.VITE_API_URL}/api/cart`
+const API = `${import.meta.env.VITE_API_BASE_URL}/api/cart`;
 
 export const fetchCart = createAsyncThunk("cart/fetch", async () => {
   const token = localStorage.getItem("token");
@@ -50,7 +50,7 @@ const cartSlice = createSlice({
   initialState: { cart: { items: [] }, loading: false },
   reducers: {
     clearCart: (state) => {
-      state.cart = { items: [] }; 
+      state.cart = { items: [] };
     },
   },
   extraReducers: (builder) => {
@@ -73,7 +73,6 @@ const cartSlice = createSlice({
       });
   },
 });
-
 
 export const { clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
